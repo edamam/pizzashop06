@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>注文確認</title>
+<script type="text/javascript" src="lib.js"></script>
+<div align="center">
+	<script type="text/javascript">
+	<!--
+    function callback(request){
+		var total= Number(0);
+        var json = eval(request.responseText);
+        var res = '';
+        if (json.length == 1){
+            res += '<tr><td>' + json[0].title +'</td>';
+            res += '<td>' + json[0].price +'</td></tr>';
+			total += Number(json[0].price);
+        } else {
+            for (var i = 0;i < json.length;i++){
+                res += '<tr><td>' + json[i].title + '</td>';
+                res +='<td>' + json[i].price +'</td></tr>';
+				total += Number(json[i].price);
+            }
+        }
+		res +='<tr><td>' + '合計金額' +'</td>' +'<td>' +total + '</td></tr>';
+        var obj = document.getElementById("datatable");
+        obj.innerHTML = res;
+    }
+    -->
+                </script>
+</head>
+<body onload="getData(null);">
+	<h1>以下の商品でよろしいですか</h1><br><br>
+
+	<table id="datatable" border="1">
+		<tr>
+			<td>wait...</td>
+		</tr>
+	</table>
+	<input type="button" onclick="location.href='indexmodoki.html'" value="確定する"><br>
+	<input type="button" onclick="location.href='index.html'" value="やっぱやめる"><br>
+	</div>
+</body>
+</html>

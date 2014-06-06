@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>Pizzashop</servlet-name>
+		<servlet-class>pizza.PizzashopServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Pizzashop</servlet-name>
+		<url-pattern>/pizzashop</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>top.html</welcome-file>
+	</welcome-file-list>
+	
+<servlet>
+    <servlet-name>add_linkdata</servlet-name>
+    <servlet-class>pizza.AddLinkDataServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>add_linkdata</servlet-name>
+    <url-pattern>/add</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>edit_linkdata</servlet-name>
+    <servlet-class>pizza.EditLinkDataServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>edit_linkdata</servlet-name>
+    <url-pattern>/edit</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>del_linkdata</servlet-name>
+    <servlet-class>pizza.DelLinkDataServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>del_linkdata</servlet-name>
+    <url-pattern>/del</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>haitatu_linkdata</servlet-name>
+    <servlet-class>pizza.HaitatuServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>haitatu_linkdata</servlet-name>
+    <url-pattern>/haitatu</url-pattern>
+</servlet-mapping>
+<servlet>
+    
+    <servlet-name>del2_linkdata</servlet-name>
+    <servlet-class>pizzashop.DelLinkDataServlet2</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>del2_linkdata</servlet-name>
+    <url-pattern>/del2</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>edit2_linkdata</servlet-name>
+    <servlet-class>pizzashop.EditLinkDataServlet2</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>edit2_linkdata</servlet-name>
+    <url-pattern>/edit2</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>login2_linkdata</servlet-name>
+    <servlet-class>pizzashop.LoginServlet2</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>login2_linkdata</servlet-name>
+    <url-pattern>/login2</url-pattern>
+</servlet-mapping>
+
+
+</web-app>
