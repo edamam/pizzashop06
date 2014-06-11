@@ -28,8 +28,11 @@ public class LinkData {
     
     @Persistent
     private String name;
+    
+    @Persistent
+    private String topping;
 
-    public LinkData(String title, int price, String comment, Date datetime,int haitatu,String name) {
+    public LinkData(String title, int price, String comment, Date datetime,int haitatu,String name, String topping) {
         super();
         this.title = title;
         this.price = price;
@@ -37,6 +40,7 @@ public class LinkData {
         this.datetime = datetime;
         this.haitatu = haitatu;
         this.name=name;
+        this.topping=topping;
     }
  
     public Long getId() {
@@ -92,5 +96,13 @@ public class LinkData {
  
     public void setName(String name) {
         this.name = name;
+    }
+    
+    public String getTopping() {
+        return topping;
+    }
+ 
+    public void setTopping(String topping) {
+        this.topping = topping;
     }
 }

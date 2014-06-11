@@ -24,19 +24,27 @@ public class AddLinkDataServlet extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         String title = req.getParameter("pizza");
         String name = req.getParameter("name");
-        int price = 0;
+        String topping = req.getParameter("topping");
+        int price1 = 0;
+        int price2 = 2;
         int haitatu=1;
-        if(title.equals("マリナーラ")==true) price=450;
-        if(title.equals("マルゲリータ")==true) price=500;
-        if(title.equals("クアトロフォルマッジ")==true) price=550;
-        if(title.equals("クアトロスタジオニ")==true) price=600;
-        if(title.equals("ボスカイオラ")==true) price=650;
-        if(title.equals("ビスマルク")==true) price=700;
-        if(title.equals("ペスカトーレ")==true) price=750;
-        if(title.equals("カプリチョーザ")==true) price=800;
+        if(title.equals("マリナーラ")==true) price1=450;
+        if(title.equals("マルゲリータ")==true) price1=500;
+        if(title.equals("クアトロフォルマッジ")==true) price1=550;
+        if(title.equals("クアトロスタジオニ")==true) price1=600;
+        if(title.equals("ボスカイオラ")==true) price1=650;
+        if(title.equals("ビスマルク")==true) price1=700;
+        if(title.equals("ペスカトーレ")==true) price1=750;
+        if(title.equals("カプリチョーザ")==true) price1=800;
+        
+        if(topping.equals("チーズ")==true) price2=100;
+        if(topping.equals("たまご")==true) price2=200;
+        if(topping.equals("バジル")==true) price2=50;
+        if(topping.equals("サラミ")==true) price2=100;
+        int price = price1 + price2;
         String comment = req.getParameter("comment");
         Date date = Calendar.getInstance().getTime();
-        LinkData data = new LinkData(title,price,comment,date,haitatu,name);
+        LinkData data = new LinkData(title,price,comment,date,haitatu,name,topping);
         PersistenceManagerFactory factory = PMF.get();
         PersistenceManager manager = factory.getPersistenceManager();
         try {

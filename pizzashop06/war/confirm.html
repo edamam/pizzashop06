@@ -13,11 +13,13 @@
         var res = '';
         if (json.length == 1){
             res += '<tr><td>' + json[0].title +'</td>';
+            res += '<tr><td>' + json[0].topping +'</td>';
             res += '<td>' + json[0].price +'</td></tr>';
 			total += Number(json[0].price);
         } else {
             for (var i = 0;i < json.length;i++){
                 res += '<tr><td>' + json[i].title + '</td>';
+                res += '<tr><td>' + json[i].topping +'</td>';
                 res +='<td>' + json[i].price +'</td></tr>';
 				total += Number(json[i].price);
             }

@@ -26,6 +26,7 @@ public class EditLinkDataServlet extends HttpServlet {
        long id = Long.parseLong(req.getParameter("id"));
        String title = req.getParameter("title");
        String comment = req.getParameter("comment");
+       String topping = req.getParameter("topping");
        PersistenceManagerFactory factory = PMF.get();
        PersistenceManager manager = factory.getPersistenceManager();
        LinkData data = (LinkData)manager.getObjectById(LinkData.class,id);

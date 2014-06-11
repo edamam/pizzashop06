@@ -28,9 +28,10 @@ public class EditLinkDataServlet2 extends HttpServlet {
 		String comment = req.getParameter("comment");
 		//増やした
 		String name = req.getParameter("name");
+		String topping = req.getParameter("topping");
 		int price = Integer.parseInt(req.getParameter("price"));
         Date datetime = Calendar.getInstance().getTime();
-		LinkData2 data = new LinkData2(title,price,comment);
+		LinkData2 data = new LinkData2(title,price,comment,topping);
 //		LinkData2 data = new LinkData2(title,price,comment,name);
 		PersistenceManagerFactory factory = PMF.get();
 		PersistenceManager manager = factory.getPersistenceManager();

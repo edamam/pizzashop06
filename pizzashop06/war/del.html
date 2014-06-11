@@ -15,7 +15,7 @@
         function callback(request){
             var arr = eval(request.responseText);
             var data = arr[0];
-            var msg = '<table border="1"><tr><td>' + data.title + '</td>';
+            var msg = '<table border="1"><tr><td>' + data.title + '</td><td>' + data.topping + </td>;
             msg += '<td>' + data.price + '</td></tr>';
             document.getElementById("data").innerHTML = msg;
             document.getElementById("id").value = data.id;

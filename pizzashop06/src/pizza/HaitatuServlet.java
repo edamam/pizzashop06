@@ -28,8 +28,9 @@ public class HaitatuServlet extends HttpServlet {
         int price = Integer.parseInt(req.getParameter("price"));
         String comment = req.getParameter("comment");
         String name = req.getParameter("name");
+        String topping = req.getParameter("topping");
         Date date = Calendar.getInstance().getTime();
-        LinkData data = new LinkData(title,price,comment,date,1,name);
+        LinkData data = new LinkData(title,price,comment,date,1,name,topping);
         PersistenceManagerFactory factory = PMF.get();
         PersistenceManager manager = factory.getPersistenceManager();
         try {

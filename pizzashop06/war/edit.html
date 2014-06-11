@@ -14,7 +14,8 @@
             var arr = eval(request.responseText);
             var data = arr[0];
             document.getElementById("id").value = data.id;
-            document.getElementById("title").value = data.title;
+            document.getElementById("title").value = data.title;   
+            document.getElementById("topping").value = data.topping;
             document.getElementById("price").value = data.price;
             document.getElementById("comment").value = data.comment;
         }
@@ -27,6 +28,7 @@
         <form method="post" action="/edit">
             <input type="hidden" id="id" name="id">
             <tr><th>TITLE:</th><td><input type="text" id="title" name="title"></td></tr>
+            <tr><th>TOPPING:</th><td><input type="text" id="topping" name="topping"></td></tr>
             <tr><th>PRICE:</th><td><input type="text" id="price" name="price"></td></tr>
             <tr><th>COMMENT:</th><td><textarea id="comment" name="comment"></textarea></td></tr>
             <tr><th></th><td><input type="submit" value="追加"></td></tr>

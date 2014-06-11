@@ -79,5 +79,13 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
     <url-pattern>/login2</url-pattern>
 </servlet-mapping>
 
+<servlet>
+    <servlet-name>loging</servlet-name>
+    <servlet-class>login.loging</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>loging</servlet-name>
+    <url-pattern>/loging</url-pattern>
+</servlet-mapping>
 
 </web-app>

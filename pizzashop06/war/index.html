@@ -11,10 +11,12 @@
             var json = eval(request.responseText);
             var res = '';
             if (json.length == 1){
-                res += '<tr><td>' + json[0].title +'</td><tr>';
+                res += '<tr><td>' + json[0].title +'</td>';
+                res += '<td>' + json[0].topping +'</td></tr>';
             } else {
                 for (var i = 0;i < json.length;i++){
                     res += '<tr><td>' + json[i].title + '</td>';
+                    res += '<td>' + json[i].topping +'</td>';
                     res += '<td><a href="del.html?id=' + json[i].id + '">取り消し</td></tr>';
                 }
             }

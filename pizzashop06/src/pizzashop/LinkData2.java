@@ -22,12 +22,16 @@ public class LinkData2 {
 
     @Persistent
     private String name;
+    
+    @Persistent
+    private String topping;
 
-    public LinkData2(String title,int price, String comment) {
+    public LinkData2(String title,int price, String comment, String topping) {
         super();
         this.title = title;
         this.price = price;
         this.comment = comment;
+        this.topping = topping;
     }
 /*
     public LinkData2(String title, int price, String comment, String name) {
@@ -68,6 +72,14 @@ public class LinkData2 {
  
     public void setPrice(int price) {
         this.price = price;
+    }
+    
+    public String getTopping() {
+        return topping;
+    }
+ 
+    public void setTopping(String Topping) {
+        this.topping = topping;
     }
 /*    できなかった
     public String getName() {

@@ -29,13 +29,17 @@ public class LinkdataHaitatu {
     @Persistent
     private String name;
     
-    public LinkdataHaitatu(String title, int price, String comment,String haitatu,String name) {
+    @Persistent
+    private String topping;
+    
+    public LinkdataHaitatu(String title, int price, String comment,String haitatu,String name, String topping) {
         super();
         this.title = title;
         this.price = price;
         this.comment = comment;
         this.haitatu = haitatu;
         this.name=name;
+        this.topping = topping;
     }
 
 	public Long getId() {
@@ -91,5 +95,14 @@ public class LinkdataHaitatu {
  
     public void setName(String name) {
         this.name = name;
+    }
+    
+    
+    public String getTopping() {
+        return topping;
+    }
+ 
+    public void setTopping(String Topping) {
+        this.topping = topping;
     }
 }

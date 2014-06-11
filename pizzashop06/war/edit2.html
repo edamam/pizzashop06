@@ -15,6 +15,7 @@
             var data = arr[0];
             document.getElementById("id").value = data.id;
             document.getElementById("title").value = data.title;
+            document.getElementById("topping").value = data.topping;
             document.getElementById("comment").value = data.comment;
             document.getElementById("price").value = data.price;
             document.getElementById("name").value = data.name;
@@ -30,6 +31,7 @@
             <input type="hidden" id="id" name="id">
             <input type="hidden" id="price" name="price">
             <tr><th>ピザ名:</th><td><input type="text" id="title" name="title"></td></tr>
+            <tr><th>トッピング:</th><td><input type="text" id="topping" name="topping"></td></tr>
             <tr><th>配達先:</th><td><textarea id="comment" name="comment"></textarea></td></tr>
             <th>配達済み</th><td><input type="radio" name="haitatu"value="1"></td>
             <tr><th></th><td><input type="submit" value="変更"></td></tr>

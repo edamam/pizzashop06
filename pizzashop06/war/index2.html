@@ -12,11 +12,13 @@
             var res = '';
             if (json.length == 1){
                 res += '<tr><td>' + json[0].title +'</td></tr>';
+                res += '<tr><td>' + json[0].topping +'</td><tr>';
                 res += '<tr><td>' + json[0].price+'</td></tr>';
                 res += '<tr><td>' + json[0].comment +'</td></tr>';
             } else {
                 for (var i = 0;i < json.length;i++){
                     res += '<tr><td>' + json[i].title + '</td>';
+                    res += '<tr><td>' + json[i].topping +'</td><tr>';
                     res += '<td>' + json[i].price + '</td>';
                     res += '<td>' + json[i].comment + '</td>';
                     res +='<td><a href="edit2.html?id=' + json[i].id + '">配達</td></tr>';
